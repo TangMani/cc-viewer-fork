@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.5 (2026-03-03)
+
+- Feat: LAN access with token-based security — server listens on 0.0.0.0 with random token for non-localhost requests
+- Feat: token interceptor — auto-attaches URL token to all fetch/EventSource/WebSocket requests from mobile
+- Fix: WebSocket terminal input broken after token interceptor replaced WebSocket constructor without preserving static constants (OPEN/CLOSED)
+- Fix: WebSocket upgrade requests intercepted by handleRequest returning HTML instead of 101 handshake
+- Fix: port probe before binding 0.0.0.0 to avoid conflict with existing 127.0.0.1 listeners
+- Static assets (JS/CSS/favicon) exempt from token validation
+
 ## 1.4.4 (2026-03-02)
 
 - Feat: QR code in Display Settings drawer — scan to access cc-viewer from mobile on LAN
