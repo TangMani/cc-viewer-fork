@@ -1,11 +1,15 @@
 # Changelog
 
-## 1.4.2 (2026-03-02)
+## 1.4.3 (2026-03-02)
 
 - Fix: Native mode shell hook now passthrough non-API commands directly without ccv interception
 - Added passthrough list for subcommands: `doctor`, `install`, `update`, `upgrade`, `auth`, `setup-token`, `agents`, `plugin`, `mcp`
 - Added passthrough list for flags: `--version`, `-v`, `--v`, `--help`, `-h`
 - These commands don't involve API calls and don't need proxy/logging
+
+## 1.4.2 (2026-03-02)
+
+- Fix: prevent redundant cc-viewer server startup when Claude Code is launched via `ccv --c` or `ccv run` proxy mode (CCV_PROXY_MODE env guard)
 
 ## 1.4.1 (2026-03-02)
 
